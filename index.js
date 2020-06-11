@@ -17,8 +17,7 @@ module.exports = function(path, callback, hashSize) {
 	// Covert to small gray image
 	var promise = sharp(path)
 		.grayscale()
-		.resize(width, height)
-		.ignoreAspectRatio()
+		.resize(width, height, { fit: 'fill' })
 		.raw()
 		.toBuffer()
 		.then(function(pixels) {
@@ -52,7 +51,7 @@ function binaryToHex(s) {
 		var hex = decimal.toString(16);
 		output += hex;
 	}
-	return new Buffer(output, 'hex');
+	return new Buffer.from(output, 'hex');
 }
 
 function px(pixels, width, x, y) {

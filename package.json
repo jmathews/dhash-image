@@ -10,11 +10,12 @@
   "author": "Richard van der Dys <richard.vanderdys@gmail.com> (http://richardvanderdys.com/)",
   "contributors": [
     "Jonathan Ong <jonathanrichardong@gmail.com>",
-    "Lovell Fuller <npm@lovell.info>"
+    "Lovell Fuller <npm@lovell.info>",
+    "Jeff Mathews <jeffreymathews@gmail.com>"
   ],
   "license": "MIT",
   "dependencies": {
-    "sharp": "0.20.8"
+    "sharp": "^0.25.3"
   },
   "devDependencies": {
     "mocha": "5",
@@ -26,7 +27,7 @@
     "test-cov": "nyc mocha --reporter dot",
     "test-travis": "nyc mocha --reporter lcovonly --reporter dot"
   },
-  "repository": "mgmtio/dhash-image",
+  "repository": "jmathews/dhash-image",
   "files": [
     "index.js"
   ]
