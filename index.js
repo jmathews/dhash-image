@@ -38,11 +38,10 @@ function binaryToHex(s) {
   var output = "";
   for (var i = 0; i < s.length; i += 4) {
     var bytes = s.substr(i, 4);
-    var decimal = parseInt(bytes, 2);
-    var hex = decimal.toString(16);
-    output += hex;
+    var digit = parseInt(bytes, 2);
+    output += digit.toString(16);
   }
-  return new Buffer.from(output, "hex");
+  return output;
 }
 
 function px(pixels, width, x, y) {
